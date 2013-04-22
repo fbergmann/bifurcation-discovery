@@ -6,17 +6,39 @@ using System.Threading;
 namespace BifurcationFrontend
 {
     /// <summary>
-    /// 
     /// </summary>
     public class WorkerThread
     {
+        private readonly Thread _thread;
+
+        public WorkerThread()
+        {
+            Actions = new Queue<Action>();
+            _thread = new Thread(RunThread);
+        }
+
         public bool ShouldStop { get; set; }
 
         private Queue<Action> Actions { get; set; }
 
+        public bool IsAlive
+        {
+            get { return _thread.IsAlive; }
+        }
+
+        public void Abort()
+        {
+            _thread.Abort();
+        }
+
+        public void Join()
+        {
+            _thread.Join();
+        }
+
         public void QueueItem(Action action)
         {
-            lock(this)
+            lock (this)
             {
                 Actions.Enqueue(action);
             }
@@ -33,27 +55,17 @@ namespace BifurcationFrontend
                     continue;
                 }
 
-                var current = Actions.Dequeue();
+                Action current = Actions.Dequeue();
                 if (current != null)
                 {
                     current();
                 }
-
             }
         }
 
-        private Thread _thread;
-
-        public WorkerThread()
+        public void Start()
         {
-            Actions = new Queue<Action>();
-            _thread = new Thread(new ThreadStart(this.RunThread));
+            _thread.Start();
         }
-
-        public void Start() { _thread.Start(); }
-        public void Join() { _thread.Join(); }
-        public void Abort() { _thread.Abort(); }
-        public bool IsAlive { get { return _thread.IsAlive; } }
-
     }
 }

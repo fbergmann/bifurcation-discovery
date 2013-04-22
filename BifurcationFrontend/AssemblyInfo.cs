@@ -1,19 +1,19 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
 
 //
 // Allgemeine Informationen über eine Assembly werden über folgende Attribute 
 // gesteuert. Ändern Sie diese Attributswerte, um die Informationen zu modifizieren,
 // die mit einer Assembly verknüpft sind.
 //
-[assembly: AssemblyTitle("BifurcationFrontend")]
-[assembly: AssemblyDescription("BioSPICE Bifurcation Discovery Tool")]
+
+[assembly: AssemblyTitle("BifurcationDiscoveryTool")]
+[assembly: AssemblyDescription("Bifurcation Discovery Tool")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("KGI")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Frank Bergmann")]
+[assembly: AssemblyCopyright("(c) 2009-2013 Frank T. Bergmann")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]		
+[assembly: AssemblyCulture("")]
 
 //
 // Versionsinformationen für eine Assembly bestehen aus folgenden vier Werten:
@@ -26,7 +26,7 @@ using System.Runtime.CompilerServices;
 // Sie können alle Werte oder die standardmäßige Revision und Buildnummer 
 // mit '*' angeben:
 
-[assembly: AssemblyVersion("2.0.*")]
+[assembly: AssemblyVersion("3.0.*")]
 
 //
 // Um die Assembly zu signieren, müssen Sie einen Schlüssel angeben. Weitere Informationen 
@@ -53,6 +53,7 @@ using System.Runtime.CompilerServices;
 //   (*) Das verzögern der Signierung ist eine erweiterte Option. Weitere Informationen finden Sie in der
 //       Microsoft .NET Framework-Dokumentation.
 //
+
 [assembly: AssemblyDelaySign(false)]
 [assembly: AssemblyKeyFile("")]
 [assembly: AssemblyKeyName("")]

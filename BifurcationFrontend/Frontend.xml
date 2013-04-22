@@ -6,86 +6,90 @@
     <members>
         <member name="T:bifurcation.ConfigDialog">
             <summary>
-            Summary description for ConfigDialog.
+                Summary description for ConfigDialog.
             </summary>
         </member>
         <member name="F:bifurcation.ConfigDialog.components">
             <summary>
-            Required designer variable.
+                Required designer variable.
             </summary>
         </member>
         <member name="M:bifurcation.ConfigDialog.#ctor">
             <summary>
-            constructs a new configuration dialog
-            </summary>
-        </member>
-        <member name="M:bifurcation.ConfigDialog.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
+                constructs a new configuration dialog
             </summary>
         </member>
         <member name="M:bifurcation.ConfigDialog.InitializeComponent">
             <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
+                Required method for Designer support - do not modify
+                the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:bifurcation.ConfigDialog.Dispose(System.Boolean)">
+            <summary>
+                Clean up any resources being used.
             </summary>
         </member>
         <member name="P:bifurcation.ConfigDialog.RandomNumberSeed">
             <summary>
-            return the configured random seed
+                return the configured random seed
             </summary>
         </member>
         <member name="P:bifurcation.ConfigDialog.StoppingTolerance">
             <summary>
-            return the configured stopping tolerance
+                return the configured stopping tolerance
             </summary>
         </member>
         <member name="P:bifurcation.ConfigDialog.MutationProbability">
             <summary>
-            return the configured mutation probability
+                return the configured mutation probability
             </summary>
         </member>
         <member name="P:bifurcation.ConfigDialog.CrossoverProbability">
             <summary>
-            return the configured crossover probability
+                return the configured crossover probability
             </summary>
         </member>
         <member name="P:bifurcation.ConfigDialog.NumberOfTournament">
             <summary>
-            return the configured number of tournament members
+                return the configured number of tournament members
             </summary>
         </member>
         <member name="P:bifurcation.ConfigDialog.NumberOfMembers">
             <summary>
-            return the configured number of members
+                return the configured number of members
             </summary>
         </member>
         <member name="P:bifurcation.ConfigDialog.NumberOfGenerations">
             <summary>
-            return the configured number of generations 
+                return the configured number of generations
             </summary>
         </member>
         <member name="P:bifurcation.ConfigDialog.SimulationTime">
             <summary>
-            return the configured simulation end time
+                return the configured simulation end time
             </summary>
         </member>
         <member name="T:BifurcationFrontend.DBGraphics">
             <summary>
-            Class to implement Double Buffering 
-            NT Almond 
-            24 July 2003
+                Class to implement Double Buffering
+                NT Almond
+                24 July 2003
             </summary>
-            
         </member>
         <member name="M:BifurcationFrontend.DBGraphics.#ctor">
             <summary>
-            Default constructor
+                Default constructor
             </summary>
+        </member>
+        <member name="M:BifurcationFrontend.DBGraphics.CanDoubleBuffer">
+            <summary>
+            </summary>
+            <returns>true if double buffering can be achieved</returns>
         </member>
         <member name="M:BifurcationFrontend.DBGraphics.CreateDoubleBuffer(System.Drawing.Graphics,System.Int32,System.Int32)">
             <summary>
-            Creates double buffer object
+                Creates double buffer object
             </summary>
             <param name="g">Window forms Graphics Object</param>
             <param name="width">width of paint area</param>
@@ -94,59 +98,53 @@
         </member>
         <member name="M:BifurcationFrontend.DBGraphics.Render(System.Drawing.Graphics)">
             <summary>
-            Renders the double buffer to the screen
+                Renders the double buffer to the screen
             </summary>
             <param name="g">Window forms Graphics Object</param>
         </member>
-        <member name="M:BifurcationFrontend.DBGraphics.CanDoubleBuffer">
-            <summary>
-            
-            </summary>
-            <returns>true if double buffering can be achieved</returns>
-        </member>
         <member name="P:BifurcationFrontend.DBGraphics.g">
             <summary>
-            Accessor for memory graphics object
+                Accessor for memory graphics object
             </summary>
         </member>
         <member name="T:BifurcationFrontend.FrontendService">
             <summary>
-            the class FrontendService represents the sbw service that implements the updateStatus service
-            method for the frontend. the sbw bifurcation module will call the updataStatus method from 
-            time to time to transmit preliminay results. 
+                the class FrontendService represents the sbw service that implements the updateStatus service
+                method for the frontend. the sbw bifurcation module will call the updataStatus method from
+                time to time to transmit preliminay results.
             </summary>
         </member>
         <member name="F:BifurcationFrontend.FrontendService.m_oForm">
             <summary>
-            the windows form representing the frontend for the bifurcation module
+                the windows form representing the frontend for the bifurcation module
             </summary>
         </member>
         <member name="M:BifurcationFrontend.FrontendService.Main(System.String[])">
             <summary>
-            main method for this application ... this will set up the 
-            SBW module representing the frontend
+                main method for this application ... this will set up the
+                SBW module representing the frontend
             </summary>
             <param name="args">the command line arguments</param>
         </member>
         <member name="M:BifurcationFrontend.FrontendService.doAnalysis(System.String)">
             <summary>
-            the analysis method that will be called by JDesigner
+                the analysis method that will be called by JDesigner
             </summary>
             <param name="sSBML"></param>
         </member>
-        <member name="M:BifurcationFrontend.FrontendService.updateStatus(System.Collections.ArrayList)">
-            <summary>
-            the updateStatus method will be called by the bifurcation module to 
-            send preliminary data to the frontend. this data will then be displayed.
-            </summary>
-            <param name="oList">the arguments</param>
-        </member>
         <member name="M:BifurcationFrontend.FrontendService.oFrontendModule_ModuleShutdown(System.Object,System.EventArgs)">
             <summary>
-            the module shutdown handler. This will be called if the broker shuts down this module
+                the module shutdown handler. This will be called if the broker shuts down this module
             </summary>
             <param name="sender">frontend</param>
             <param name="e">empty argument</param>
+        </member>
+        <member name="M:BifurcationFrontend.FrontendService.updateStatus(System.Collections.ArrayList)">
+            <summary>
+                the updateStatus method will be called by the bifurcation module to
+                send preliminary data to the frontend. this data will then be displayed.
+            </summary>
+            <param name="oList">the arguments</param>
         </member>
         <member name="T:BifurcationFrontend.Properties.Resources">
             <summary>
@@ -164,9 +162,43 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="P:BifurcationFrontend.Properties.Resources.About_BifTool">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BifurcationFrontend.Properties.Resources.arrow_down">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BifurcationFrontend.Properties.Resources.arrow_up">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BifurcationFrontend.Properties.Resources.configure">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BifurcationFrontend.Properties.Resources.edit_clear">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BifurcationFrontend.Properties.Resources.ICON_BifTool_128x128">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:BifurcationFrontend.Properties.Resources.transform_move">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="T:BifurcationFrontend.WorkerThread">
             <summary>
-            
             </summary>
         </member>
     </members>

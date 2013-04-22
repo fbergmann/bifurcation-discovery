@@ -7,7 +7,7 @@
     <ProjectGuid>{8D0E7936-1C95-4A27-83DE-1FE0AB4CAA60}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>temp.ico</ApplicationIcon>
+    <ApplicationIcon>ICON_BifTool.ico</ApplicationIcon>
     <AssemblyKeyContainerName />
     <AssemblyName>BifurcationFrontend</AssemblyName>
     <AssemblyOriginatorKeyFile />
@@ -93,6 +93,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\3rdParty\libsbmlcsP.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="SBMLSupport, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\3rdParty\SBMLSupport.dll</HintPath>
@@ -125,11 +126,17 @@
     <Compile Include="AboutBifurcation.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AboutBifurcation.Designer.cs">
+      <DependentUpon>AboutBifurcation.cs</DependentUpon>
+    </Compile>
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BifurcationForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BifurcationForm.Designer.cs">
+      <DependentUpon>BifurcationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfigDialog.cs">
       <SubType>Form</SubType>
@@ -144,8 +151,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="WorkerThread.cs" />
+    <None Include="About_BifTool.png" />
     <Content Include="App.ico" />
-    <Content Include="temp.ico" />
+    <None Include="transform-move.png" />
+    <None Include="arrow-down.png" />
+    <None Include="arrow-up.png" />
+    <None Include="configure.png" />
+    <None Include="edit-clear.png" />
+    <Content Include="ICON_BifTool.ico" />
+    <None Include="ICON_BifTool_128x128.png" />
     <EmbeddedResource Include="AboutBifurcation.resx">
       <DependentUpon>AboutBifurcation.cs</DependentUpon>
     </EmbeddedResource>
