@@ -138,6 +138,13 @@ namespace BifurcationFrontend
             zedGraphControl1.AxisChange();
             TransparencyKey = Color.Empty;
             sbwMenuHandler.UpdateSBWMenu();
+
+            SBWExporter.SetupImportExport(
+     mnuImport, FrontendService.updateService.doAnalysis,
+     mnuSBWExport, FrontendService.updateService.getSBML
+     );
+
+
             thread.Start();
         }
 
